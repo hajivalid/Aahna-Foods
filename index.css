@@ -1,3 +1,172 @@
-#parent{
-    color:red;
+body{
+    margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.header img, .footerSection img{
+    width: 150px;
+    height: 80px;
+    object-fit: cover;
+}
+.header .nav-list .nav{
+    display: flex;
+    margin: auto 10px;
+}
+.header .nav-list li{
+    list-style: none;
+    color: #233142;
+    padding: 20px;
+}
+.header .nav-list li:hover{
+    cursor: pointer;
+    color: #FA0112;
+}
+
+.filterSection{margin: 20px 20px 10px;}
+.filterSection h2{
+    font-size: 17px;
+    color: gray;
+    font-weight: 100;
+}
+.filterSection, .rateByFilter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.searchInfo{
+    text-align: center;
+}
+.searchInfo .searchInput {
+    position: relative;
+    margin: 0px auto;
+    /* width: 50%; */
+}
+
+.searchInfo .searchInput input{
+    height: 25px;
+    color: #233142;;
+    width: 450px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
+    border: 1px solid #3333;
+}
+.searchInfo .searchInput input:focus-visible{
+    outline-color: #3333;
+}
+
+.searchInfo .searchInput .searchIcon {
+    position: absolute;
+    top: 14px;
+    font-size: 20px;
+    color: #FA0112;
+    right: 17px;
+ }
+ .rateByFilter .rating{
+    margin: 0px 5px;
+ }
+ .rateByFilter > svg{color: #FA0112;}
+
+ .resCard {
+    width: 310px;
+    border: 1px solid #3333;
+    margin: 10px;
+    
+ }
+ .resCard:hover{
+    cursor: pointer;
+    transform: scale(0.95, 0.95);
+    transform-origin: center center;
+    transition: all 0.1s ease-in 0s;
+ }
+
+ .resCard img{
+    width: 310px;
+    height: 200px;
+    object-fit: cover;
+ }
+ .cardInfo {
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #233142;
+ }
+ .allCards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 9px;
+}
+ 
+ .cardInfo .resTitle, .cardInfo .resCuisine, .cardInfo .costTime, .cardInfo .resLocality{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+ }
+ .cardInfo .title{
+    font-size: 18px;
+    max-width: 230px;
+ }
+
+ .cardInfo .title, .cardInfo .costTime, .cardInfo .rating, .rateByFilter .rating{
+    font-weight: 600;
+ }
+ .cardInfo .locality{font-size: 14px;}
+ .cardInfo .rating , .rateByFilter .rating{
+    padding: 3px 6px;
+    font-size: 16px;
+    color: white;
+    border-radius: 5px;
+    align-items: baseline;
+    display: flex;
+ }
+ .cardInfo .rating{background: #267e3e;} 
+ .rateByFilter .rating{
+    color: #233142;
+    border: 2px solid #267e3e;
+ }
+ .rateByFilter .rating:hover, .rateByFilter .filterEnable{
+    background: #233142;
+    color: white;
+    border: 2px solid #233142;
+ }
+
+ .cardInfo .resCuisine .cuisine{
+    max-height: 23px;
+    overflow: hidden;
+ }
+
+ .cardInfo .rating svg, .rateByFilter .rating svg{
+    font-size: 10px;
+    margin-left: 3px;
+ }
+ .deliveryTime{
+    padding: 5px;
+    text-align: end;
+ }
+
+ .footerSection{
+    background: #233142;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+ }
+ .footerSection .copyRight{
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+ }
+ .footerSection .socialLinks svg{
+    height: 30px;
+    cursor: pointer;
+    color: white;
+    margin: 0px 5px;
+ }
+ .footerSection .socialLinks svg:hover{
+    color: #FA0112;
+ }
