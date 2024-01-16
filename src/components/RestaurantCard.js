@@ -1,12 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import resImg from "../utils/images/Ahna_white.png";
 import {IMAGE_URL} from "../utils/constants";
 
 const RestaurantCard = (props) => {
-    const {restaurantData} = props;
-    const { info: { cloudinaryImageId, name, avgRating, cuisines,  costForTwo, locality, areaName, sla} } = restaurantData;
-    console.log(restaurantData);
+    const {filterData} = props;
+    const { info: { cloudinaryImageId, name, avgRating, cuisines,  costForTwo, locality, areaName, sla} } = filterData;
 
     return(
         <div className="resCard">

@@ -2,10 +2,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFilter, faStar } from "@fortawesome/free-solid-svg-icons";
 
 const RateFilter = (props) =>{
-    console.log(props);
     const onRateHandler = (rating) =>{
-        let data = props?.restData.filter((item) => item?.info?.avgRating >= rating)
-        console.log(data);
+        let data = props?.restData?.filter((item) => item?.info?.avgRating >= rating)
+        data = (data.length === 0) ? "No" : data;
         props.filteredData(data);
     }
 
