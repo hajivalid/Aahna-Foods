@@ -18,12 +18,19 @@ body{
     margin: auto 10px;
 }
 .header .nav-list li{
-    list-style: none;
-    color: #233142;
-    padding: 20px;
+   list-style: none;
+   color: #233142;
+   cursor: pointer;
 }
-.header .nav-list li:hover{
-    cursor: pointer;
+.header .nav-list a{
+   text-decoration: none;
+   color: #233142;
+   font-size: 18px;
+   padding: 20px;
+}
+
+.header .nav-list li:hover a{
+    
     color: #FA0112;
 }
 
@@ -86,10 +93,13 @@ body{
  .rateByFilter > svg{color: #233142; margin-right: 5px;}
 
  .resCard {
-    width: 310px;
+    height: 100%;
     border: 1px solid #3333;
-    margin: 10px;
-    
+ }
+ .cardLink{
+   width: 23.8%;
+   margin: 10px auto;
+   text-decoration: none;
  }
  .resCard:hover{
     cursor: pointer;
@@ -99,7 +109,7 @@ body{
  }
 
  .resCard img{
-    width: 310px;
+    width: 100%;
     height: 200px;
     object-fit: cover;
  }
@@ -198,11 +208,11 @@ body{
     background: #eee;
 }
 .shimmerContainer .cardsContainer {
-    width: 310px;
-    margin: 10px;
+    width: 23.2%;
+    margin: 10px auto;
  }
  .shimmerContainer .cardsContainer .imageCard{
-    width: 310px;
+    width: 100%;
     height: 200px;
     background: #eee;
  }

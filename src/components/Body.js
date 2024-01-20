@@ -4,6 +4,7 @@ import Search from "./Search";
 import RateFilter from "./rateFilter";
 import CardShimmerUI from "./cardShimmerUI";
 // import { fetchCardInfo } from "../utils/helper";
+import { Link } from "react-router-dom";
 
 const Body = () => {
     const [restaurantData, setRestaurantData] = useState([]);
@@ -39,7 +40,7 @@ const Body = () => {
                     :
                     <div className="allCards">
                         {filterData.map((item)=>(
-                            <RestaurantCard key={item.info.id} filterData={item}/>
+                            <Link className="cardLink" key={item.info.id} to={"/restaurant/"+item.info.id}><RestaurantCard filterData={item}/></Link>
                         ))}
                     </div>
             }
