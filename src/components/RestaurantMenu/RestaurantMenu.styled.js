@@ -9,7 +9,7 @@ export const RestInfoStyle = styled.div`
 
     .restInfo {
       display: flex;
-      align-items: baseline;
+      align-items: end;
       justify-content: space-between;
       margin-bottom: 20px;
     }
@@ -25,6 +25,11 @@ export const RestInfoStyle = styled.div`
         border: 1px solid #233142;
         border-radius: 5px;
         width: 60%;
+        & .rating{
+          color: #267e3e;
+          font-weight: 600;
+          padding: 5px;
+        }
     }
     .restRating{
         display: grid;

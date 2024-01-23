@@ -236,6 +236,20 @@ body{
    background-size: 1200px 100%;
 }
 
+.aboutUs{
+   margin: 20px;
+}
+.aboutCard{
+   padding: 15px;
+    border: 1px solid #233142;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.aboutCard h3{
+   margin: 5px 0px;
+
+}
+
 @-webkit-keyframes shimmer {
    0% {
        background-position: -100% 0;
