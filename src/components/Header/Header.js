@@ -15,6 +15,7 @@ const Header = () =>{
                 <ul className="nav">
                     <li className={`list-item onlineStatus ${signalIcon}`}><FontAwesomeIcon icon={faGlobe}/></li>
                     <li className="list-item"><Link to='/'>Home</Link></li>
+                    <li className="list-item"><Link to='/grocery'>Grocery</Link></li>
                     <li className="list-item"><Link to='/about'>About US</Link></li>
                     <li className="list-item"> <Link to='/contact'>Contact US</Link></li>
                     <li className="list-item cartIcon"><FontAwesomeIcon icon={faShoppingCart}/></li>
