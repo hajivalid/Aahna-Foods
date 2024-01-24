@@ -5,6 +5,7 @@ import RateFilter from "./rateFilter";
 import CardShimmerUI from "./cardShimmerUI";
 // import { fetchCardInfo } from "../utils/helper";
 import { Link } from "react-router-dom";
+import { getUrlsBasedOnGeoLocation } from "../utils/constants";
 
 const Body = () => {
     const [restaurantData, setRestaurantData] = useState([]);
@@ -20,7 +21,8 @@ const Body = () => {
     }, []);
 
     const fetchCardInfo = async() =>{
-        let data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4860808&lng=78.3963095&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const urls = await getUrlsBasedOnGeoLocation();
+        let data = await fetch(urls.CARD_INFO);
         const json = await data.json();
 
         setRestaurantData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);

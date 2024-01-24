@@ -7,7 +7,6 @@ class About extends Component {
             <div className="aboutUs">
                 <h1>About Us</h1>
                 <User name={'name'} location={'Location'} contact={'email'}/>
-                <User name={'name'} location={'Location'} contact={'email'}/>
             </div>
         );
     }

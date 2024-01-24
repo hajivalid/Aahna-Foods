@@ -249,6 +249,9 @@ body{
    margin: 5px 0px;
 
 }
+.onlineStatus{pointer-events: none;}
+.online{color: #267e3e !important}
+.offline{color: #FA0112 !important}
 
 @-webkit-keyframes shimmer {
    0% {
