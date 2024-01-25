@@ -19,7 +19,8 @@ export const Itemcard = styled.div`
     height: 96px;
     -o-object-fit: cover;
     object-fit: cover;
-    border-radius: 6px
+    border-radius: 6px;
+    margin-bottom:6px;
 }
 & button {
     padding: 10px 20px;
@@ -36,6 +37,8 @@ export const Itemcard = styled.div`
 }
 & h3{
     margin:5px 0px;
+    font-weight: 600;
+    font-size: 18px;
 }
 & .veg{color: #267e3e; margin-right: 5px }
 & .nonVeg{color: #ae0410; margin-right: 5px }

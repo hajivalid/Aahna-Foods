@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const RestInfoStyle = styled.div`
-  background-color: #e9eaf5;
   .restDetails {
     margin: 10px auto 0px;
     width: 60%;
@@ -15,6 +14,8 @@ export const RestInfoStyle = styled.div`
     }
     h2 {
       margin: 10px 0px;
+      font-weight: 600;
+      font-size: 18px;
     }
     p {
       margin: 5px 0px;

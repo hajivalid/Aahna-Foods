@@ -31,8 +31,8 @@ const Body = () => {
 
     return restaurantData.length === 0 ? <CardShimmerUI/> :(
         <div className="bodyLayout">
-            <div className="filterSection">
-                <h2>{(filterData === 'No')?filterData : filterData.length} Accessible Restaurants</h2>
+            <div className="mt-5 mb-[10px] mx-5 flex justify-between items-center">
+                <h2 className="text-[17px] text-gray-400 text-bold">{(filterData === 'No')?filterData : filterData.length} Accessible Restaurants</h2>
                 <Search restData={restaurantData} filteredData={filteredDataHandler}/>
                 <RateFilter restData={restaurantData} filteredData={filteredDataHandler}/>
             </div>

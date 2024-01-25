@@ -15,7 +15,7 @@ const AboutUs = lazy(()=> import('./components/AboutUs'));
 
 const AppLayout = () =>{
     return(
-        <div className="AppLayout">
+        <div className="m-0 font-['Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif]" >
             <Header/>
             <Outlet/>
             <Footer/>

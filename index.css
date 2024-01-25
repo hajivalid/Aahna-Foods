@@ -1,252 +1,169 @@
-body{
-    margin: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.resCard {
+   height: 100%;
+   border: 1px solid #3333;
 }
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.cardLink{
+  width: 23.8%;
+  margin: 10px auto;
+  text-decoration: none;
 }
-.header img, .footerSection img{
-    width: 150px;
-    height: 80px;
-    object-fit: cover;
-}
-.header .nav-list .nav{
-    display: flex;
-    margin: auto 10px;
-}
-.header .nav-list li{
-   list-style: none;
-   color: #233142;
+.resCard:hover{
    cursor: pointer;
+   transform: scale(0.95, 0.95);
+   transform-origin: center center;
+   transition: all 0.1s ease-in 0s;
 }
-.header .nav-list a{
-   text-decoration: none;
+
+.resCard img{
+   width: 100%;
+   height: 200px;
+   object-fit: cover;
+}
+.cardInfo {
+   padding: 5px 10px;
+   font-size: 16px;
    color: #233142;
+}
+.allCards{
+   display: flex;
+   flex-wrap: wrap;
+   margin: 0px 9px;
+}
+
+.cardInfo .resTitle, .cardInfo .resCuisine, .cardInfo .costTime, .cardInfo .resLocality{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 5px;
+}
+.cardInfo .title{
    font-size: 18px;
-   padding: 20px;
+   max-width: 230px;
 }
 
-.header .nav-list li:hover a{
-    
-    color: #FA0112;
+.cardInfo .title, .cardInfo .costTime, .cardInfo .rating, .rateByFilter .rating{
+   font-weight: 600;
+}
+.cardInfo .locality{font-size: 14px;}
+.cardInfo .rating , .rateByFilter .rating{
+   padding: 3px 6px;
+   font-size: 16px;
+   color: white;
+   border-radius: 5px;
+   align-items: baseline;
+   display: flex;
+}
+.cardInfo .rating{background: #267e3e;} 
+.rateByFilter .rating{
+   color: #233142;
+   border: 2px solid #233142;
+}
+.rateByFilter .rating:hover, .rateByFilter .filterEnable{
+   background: #FA0112;
+   color: white;
+   border: 2px solid #FA0112;
 }
 
-.filterSection{margin: 20px 20px 10px;}
-.filterSection h2{
-    font-size: 17px;
-    color: gray;
-    font-weight: 100;
-}
-.filterSection, .rateByFilter{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.searchInfo{
-    text-align: center;
-}
-.searchInfo .searchInput {
-    position: relative;
-    margin: 0px auto;
-    /* width: 50%; */
+.cardInfo .resCuisine .cuisine{
+   max-height: 23px;
+   overflow: hidden;
 }
 
-.searchInfo .searchInput input{
-    height: 25px;
-    color: #233142;;
-    width: 450px;
-    font-size: 16px;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: rgba(28, 28, 28, 0.08) 0px 2px 8px;
-    border: 1px solid #3333;
+.cardInfo .rating svg, .rateByFilter .rating svg{
+   font-size: 10px;
+   margin-left: 3px;
 }
-.searchInfo .searchInput input:focus-visible{
-    outline-color: #3333;
+.deliveryTime{
+   padding: 5px;
+   text-align: end;
 }
 
-.searchInfo .searchInput .searchIcon {
-    font-size: 20px;
-    color: #233142;
- }
- .searchInfo .searchBtn{
-   text-align: center;
-    cursor: pointer;
-    background: none;
-    padding: 11px;
-    font-size: 16px;
-    border-radius: 0px 5px 5px 0px;
-    border: none;
-    position: absolute;
-    right: 1px;
-    top: 1px;
- }
- .searchInfo .searchBtn:hover > .searchIcon{
+.footerSection img{
+   width: 150px;
+   height: 80px;
+   object-fit: cover;
+}
+
+.footerSection{
+   background: #233142;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+.footerSection .copyRight{
+   font-size: 16px;
+   font-weight: 600;
+   color: white;
+}
+.footerSection .socialLinks svg{
+   height: 30px;
+   cursor: pointer;
+   color: white;
+   margin: 0px 5px;
+}
+.footerSection .socialLinks svg:hover{
    color: #FA0112;
- }
- .rateByFilter .rating{
-    margin: 0px 5px;
- }
- .rateByFilter > svg{color: #233142; margin-right: 5px;}
-
- .resCard {
-    height: 100%;
-    border: 1px solid #3333;
- }
- .cardLink{
-   width: 23.8%;
-   margin: 10px auto;
-   text-decoration: none;
- }
- .resCard:hover{
-    cursor: pointer;
-    transform: scale(0.95, 0.95);
-    transform-origin: center center;
-    transition: all 0.1s ease-in 0s;
- }
-
- .resCard img{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
- }
- .cardInfo {
-    padding: 5px 10px;
-    font-size: 16px;
-    color: #233142;
- }
- .allCards{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 9px;
 }
- 
- .cardInfo .resTitle, .cardInfo .resCuisine, .cardInfo .costTime, .cardInfo .resLocality{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
- }
- .cardInfo .title{
-    font-size: 18px;
-    max-width: 230px;
- }
-
- .cardInfo .title, .cardInfo .costTime, .cardInfo .rating, .rateByFilter .rating{
-    font-weight: 600;
- }
- .cardInfo .locality{font-size: 14px;}
- .cardInfo .rating , .rateByFilter .rating{
-    padding: 3px 6px;
-    font-size: 16px;
-    color: white;
-    border-radius: 5px;
-    align-items: baseline;
-    display: flex;
- }
- .cardInfo .rating{background: #267e3e;} 
- .rateByFilter .rating{
-    color: #233142;
-    border: 2px solid #233142;
- }
- .rateByFilter .rating:hover, .rateByFilter .filterEnable{
-    background: #FA0112;
-    color: white;
-    border: 2px solid #FA0112;
- }
-
- .cardInfo .resCuisine .cuisine{
-    max-height: 23px;
-    overflow: hidden;
- }
-
- .cardInfo .rating svg, .rateByFilter .rating svg{
-    font-size: 10px;
-    margin-left: 3px;
- }
- .deliveryTime{
-    padding: 5px;
-    text-align: end;
- }
-
- .footerSection{
-    background: #233142;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
- }
- .footerSection .copyRight{
-    font-size: 16px;
-    font-weight: 600;
-    color: white;
- }
- .footerSection .socialLinks svg{
-    height: 30px;
-    cursor: pointer;
-    color: white;
-    margin: 0px 5px;
- }
- .footerSection .socialLinks svg:hover{
-    color: #FA0112;
- }
 
 /* Body shimmer UI styles*/
 .shimmerContainer .filterCards{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
 .shimmerContainer .filterCards{
-    margin: 20px 20px 10px;
+   margin: 20px 20px 10px;
 }
 .shimmerContainer .filterCards div {
-    width: 350px;
-    height: 35px;
-    background: #eee;
+   width: 350px;
+   height: 35px;
+   background: #eee;
 }
 .shimmerContainer .cardsContainer {
-    width: 23.2%;
-    margin: 10px auto;
- }
- .shimmerContainer .cardsContainer .imageCard{
-    width: 100%;
-    height: 200px;
-    background: #eee;
- }
- .shimmerContainer .cardsContainer .text {
-    height: 15px;
-    margin: 15px 0px 0px;
-    background: #eee;
+   width: 23.2%;
+   margin: 10px auto;
+}
+.shimmerContainer .cardsContainer .imageCard{
+   width: 100%;
+   height: 200px;
+   background: #eee;
+}
+.shimmerContainer .cardsContainer .text {
+   height: 15px;
+   margin: 15px 0px 0px;
+   background: #eee;
 }
 .shimmerContainer .cardsContainer .text:nth-child(2) {width: 250px;}
 .shimmerContainer .cardsContainer .text:nth-child(3) {width: 200px;}
 .shimmerContainer .cardsContainer .text:last-child {width: 150px;}
 
 .shimmerBG {
-   animation-duration: 2.2s;
-   animation-fill-mode: forwards;
-   animation-iteration-count: infinite;
-   animation-name: shimmer;
-   animation-timing-function: linear;
-   background: #ddd;
-   background: linear-gradient(to right, red 8%, #F0F0F0 18%, #F6F6F6 33%);
-   background-size: 1200px 100%;
+  animation-duration: 2.2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #ddd;
+  background: linear-gradient(to right, red 8%, #F0F0F0 18%, #F6F6F6 33%);
+  background-size: 1200px 100%;
 }
 
 .aboutUs{
-   margin: 20px;
+  margin: 20px;
 }
 .aboutCard{
-   padding: 15px;
-    border: 1px solid #233142;
-    border-radius: 5px;
-    margin-bottom: 10px;
+  padding: 15px;
+   border: 1px solid #233142;
+   border-radius: 5px;
+   margin-bottom: 10px;
 }
 .aboutCard h3{
-   margin: 5px 0px;
+  margin: 5px 0px;
 
 }
 .onlineStatus{pointer-events: none;}
@@ -254,19 +171,19 @@ body{
 .offline{color: #FA0112 !important}
 
 @-webkit-keyframes shimmer {
-   0% {
-       background-position: -100% 0;
-   }
-   100% {
-       background-position: 100% 0;
-   }
+  0% {
+      background-position: -100% 0;
+  }
+  100% {
+      background-position: 100% 0;
+  }
 }
 
 @keyframes shimmer {
-   0% {
-       background-position: -1200px 0;
-   }
-   100% {
-       background-position: 1200px 0;
-   }
+  0% {
+      background-position: -1200px 0;
+  }
+  100% {
+      background-position: 1200px 0;
+  }
 }
