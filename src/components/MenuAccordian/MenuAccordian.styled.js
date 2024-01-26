@@ -8,10 +8,10 @@ export const AccordianStyle = styled.div`
     cursor: pointer;
     padding: 10px 15px;
     margin: 5px 0px;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     color: #233142;
-    background-color: #fff;
+    background-color: #ddd;
     transition: all 0.2s ease-in-out;
  }
 `;

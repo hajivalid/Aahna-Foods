@@ -29,7 +29,7 @@ const RestaurantMenu = () => {
     costForTwoMessage,
   } = restInfo?.cards[0]?.card?.card?.info;
 
-  const menulist = restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card?.itemCards;
+  const menulist = restInfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
   return (
     <RestInfoStyle>
@@ -59,10 +59,10 @@ const RestaurantMenu = () => {
           </div>
         </div>
         <div className="menuList">
-          {/* <MenuAccordian menuItems={cardGroupItems}/> */}
-          {menulist.map((item)=>(
+          <MenuAccordian menuItems={menulist}/>
+          {/* {menulist.map((item)=>(
             <MenuItem key={item.card.info.id} menuList={item}/>
-          ))}
+          ))} */}
           
         </div>
       </div>
