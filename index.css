@@ -2,145 +2,166 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .resCard {
-   height: 100%;
-   border: 1px solid #3333;
+  height: 100%;
+  border: 1px solid #3333;
 }
-.cardLink{
+.cardLink {
   width: 23.8%;
   margin: 10px auto;
   text-decoration: none;
 }
-.resCard:hover{
-   cursor: pointer;
-   transform: scale(0.95, 0.95);
-   transform-origin: center center;
-   transition: all 0.1s ease-in 0s;
+.cardLink:hover {
+  cursor: pointer;
+  transform: scale(0.95, 0.95);
+  transform-origin: center center;
+  transition: all 0.1s ease-in 0s;
 }
 
-.resCard img{
-   width: 100%;
-   height: 200px;
-   object-fit: cover;
+.resCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 .cardInfo {
-   padding: 5px 10px;
-   font-size: 16px;
-   color: #233142;
+  padding: 5px 10px;
+  font-size: 16px;
+  color: #233142;
 }
-.allCards{
-   display: flex;
-   flex-wrap: wrap;
-   margin: 0px 9px;
-}
-
-.cardInfo .resTitle, .cardInfo .resCuisine, .cardInfo .costTime, .cardInfo .resLocality{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 5px;
-}
-.cardInfo .title{
-   font-size: 18px;
-   max-width: 230px;
+.allCards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 9px;
 }
 
-.cardInfo .title, .cardInfo .costTime, .cardInfo .rating, .rateByFilter .rating{
-   font-weight: 600;
+.cardInfo .resTitle,
+.cardInfo .resCuisine,
+.cardInfo .costTime,
+.cardInfo .resLocality {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
-.cardInfo .locality{font-size: 14px;}
-.cardInfo .rating , .rateByFilter .rating{
-   padding: 3px 6px;
-   font-size: 16px;
-   color: white;
-   border-radius: 5px;
-   align-items: baseline;
-   display: flex;
-}
-.cardInfo .rating{background: #267e3e;} 
-.rateByFilter .rating{
-   color: #233142;
-   border: 2px solid #233142;
-}
-.rateByFilter .rating:hover, .rateByFilter .filterEnable{
-   background: #FA0112;
-   color: white;
-   border: 2px solid #FA0112;
+.cardInfo .title {
+  font-size: 18px;
+  max-width: 230px;
 }
 
-.cardInfo .resCuisine .cuisine{
-   max-height: 23px;
-   overflow: hidden;
+.cardInfo .title,
+.cardInfo .costTime,
+.cardInfo .rating,
+.rateByFilter .rating {
+  font-weight: 600;
+}
+.cardInfo .locality {
+  font-size: 14px;
+}
+.cardInfo .rating,
+.rateByFilter .rating {
+  padding: 3px 6px;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  align-items: baseline;
+  display: flex;
+}
+.cardInfo .rating {
+  background: #267e3e;
+}
+.rateByFilter .rating {
+  color: #233142;
+  border: 2px solid #233142;
+}
+.rateByFilter .rating:hover,
+.rateByFilter .filterEnable {
+  background: #fa0112;
+  color: white;
+  border: 2px solid #fa0112;
 }
 
-.cardInfo .rating svg, .rateByFilter .rating svg{
-   font-size: 10px;
-   margin-left: 3px;
-}
-.deliveryTime{
-   padding: 5px;
-   text-align: end;
+.cardInfo .resCuisine .cuisine {
+  max-height: 23px;
+  overflow: hidden;
 }
 
-.footerSection img{
-   width: 150px;
-   height: 80px;
-   object-fit: cover;
+.cardInfo .rating svg,
+.rateByFilter .rating svg {
+  font-size: 10px;
+  margin-left: 3px;
+}
+.deliveryTime {
+  padding: 5px;
+  text-align: end;
 }
 
-.footerSection{
-   background: #233142;
-   display: flex;
-   align-items: center;
-   justify-content: space-around;
+.footerSection img {
+  width: 150px;
+  height: 80px;
+  object-fit: cover;
 }
-.footerSection .copyRight{
-   font-size: 16px;
-   font-weight: 600;
-   color: white;
+
+.footerSection {
+  background: #233142;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* position: absolute;
+  bottom: 0px;
+  width: -webkit-fill-available; */
 }
-.footerSection .socialLinks svg{
-   height: 30px;
-   cursor: pointer;
-   color: white;
-   margin: 0px 5px;
+.footerSection .copyRight {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
 }
-.footerSection .socialLinks svg:hover{
-   color: #FA0112;
+.footerSection .socialLinks svg {
+  height: 30px;
+  cursor: pointer;
+  color: white;
+  margin: 0px 5px;
+}
+.footerSection .socialLinks svg:hover {
+  color: #fa0112;
 }
 
 /* Body shimmer UI styles*/
-.shimmerContainer .filterCards{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+.shimmerContainer .filterCards {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.shimmerContainer .filterCards{
-   margin: 20px 20px 10px;
+.shimmerContainer .filterCards {
+  margin: 20px 20px 10px;
 }
 .shimmerContainer .filterCards div {
-   width: 350px;
-   height: 35px;
-   background: #eee;
+  width: 350px;
+  height: 35px;
+  background: #eee;
 }
 .shimmerContainer .cardsContainer {
-   width: 23.2%;
-   margin: 10px auto;
+  width: 23.2%;
+  margin: 10px auto;
 }
-.shimmerContainer .cardsContainer .imageCard{
-   width: 100%;
-   height: 200px;
-   background: #eee;
+.shimmerContainer .cardsContainer .imageCard {
+  width: 100%;
+  height: 200px;
+  background: #eee;
 }
 .shimmerContainer .cardsContainer .text {
-   height: 15px;
-   margin: 15px 0px 0px;
-   background: #eee;
+  height: 15px;
+  margin: 15px 0px 0px;
+  background: #eee;
 }
-.shimmerContainer .cardsContainer .text:nth-child(2) {width: 250px;}
-.shimmerContainer .cardsContainer .text:nth-child(3) {width: 200px;}
-.shimmerContainer .cardsContainer .text:last-child {width: 150px;}
+.shimmerContainer .cardsContainer .text:nth-child(2) {
+  width: 250px;
+}
+.shimmerContainer .cardsContainer .text:nth-child(3) {
+  width: 200px;
+}
+.shimmerContainer .cardsContainer .text:last-child {
+  width: 150px;
+}
 
 .shimmerBG {
   animation-duration: 2.2s;
@@ -149,41 +170,46 @@
   animation-name: shimmer;
   animation-timing-function: linear;
   background: #ddd;
-  background: linear-gradient(to right, red 8%, #F0F0F0 18%, #F6F6F6 33%);
+  background: linear-gradient(to right, red 8%, #f0f0f0 18%, #f6f6f6 33%);
   background-size: 1200px 100%;
 }
 
-.aboutUs{
+.aboutUs {
   margin: 20px;
 }
-.aboutCard{
+.aboutCard {
   padding: 15px;
-   border: 1px solid #233142;
-   border-radius: 5px;
-   margin-bottom: 10px;
+  border: 1px solid #233142;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
-.aboutCard h3{
+.aboutCard h3 {
   margin: 5px 0px;
-
 }
-.onlineStatus{pointer-events: none;}
-.online{color: #267e3e !important}
-.offline{color: #FA0112 !important}
+.onlineStatus {
+  pointer-events: none;
+}
+.online {
+  color: #267e3e !important;
+}
+.offline {
+  color: #fa0112 !important;
+}
 
 @-webkit-keyframes shimmer {
   0% {
-      background-position: -100% 0;
+    background-position: -100% 0;
   }
   100% {
-      background-position: 100% 0;
+    background-position: 100% 0;
   }
 }
 
 @keyframes shimmer {
   0% {
-      background-position: -1200px 0;
+    background-position: -1200px 0;
   }
   100% {
-      background-position: 1200px 0;
+    background-position: 1200px 0;
   }
 }

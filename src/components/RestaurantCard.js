@@ -28,4 +28,19 @@ const RestaurantCard = (props) => {
         </div>
     )
 }
+// Higher order component
+export const HigherOrderLabel = (RestaurantCard) =>{
+    return (props) => {
+        return (
+          <div className="relative h-[100%]">
+            <label className="absolute left-[-5px] top-2 text-white bg-[#267e3e] px-[8px] py-0 text-[14px] font-bold  ">
+              {props?.filterData?.info?.aggregatedDiscountInfoV3?.header}{" "}
+              {props?.filterData?.info?.aggregatedDiscountInfoV3?.subHeader}
+            </label>
+            <RestaurantCard {...props} />
+          </div>
+        );
+    }
+}
+
 export default RestaurantCard;

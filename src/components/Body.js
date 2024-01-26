@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {HigherOrderLabel} from "./RestaurantCard";
 import Search from "./Search";
 import RateFilter from "./rateFilter";
 import CardShimmerUI from "./cardShimmerUI";
@@ -16,6 +16,8 @@ const Body = () => {
         setFilterData(data);
     }
 
+    const PromotedRestaurantCard = HigherOrderLabel(RestaurantCard);
+
     useEffect(() =>{
         fetchCardInfo();
     }, []);
@@ -29,24 +31,41 @@ const Body = () => {
         setFilterData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
-    return restaurantData.length === 0 ? <CardShimmerUI/> :(
-        <div className="bodyLayout">
-            <div className="mt-5 mb-[10px] mx-5 flex justify-between items-center">
-                <h2 className="text-[17px] text-gray-400 text-bold">{(filterData === 'No')?filterData : filterData.length} Accessible Restaurants</h2>
-                <Search restData={restaurantData} filteredData={filteredDataHandler}/>
-                <RateFilter restData={restaurantData} filteredData={filteredDataHandler}/>
-            </div>
-            {
-                (filterData === 'No')?
-                    <div>Sorry!! Restaurants closed</div>
-                    :
-                    <div className="allCards">
-                        {filterData.map((item)=>(
-                            <Link className="cardLink" key={item.info.id} to={"/restaurant/"+item.info.id}><RestaurantCard filterData={item}/></Link>
-                        ))}
-                    </div>
-            }
+    return restaurantData.length === 0 ? (
+      <CardShimmerUI />
+    ) : (
+      <div className="bodyLayout">
+        <div className="mt-5 mb-[10px] mx-5 flex justify-between items-center">
+          <h2 className="text-[17px] text-gray-400 text-bold">
+            {filterData === "No" ? filterData : filterData.length} Accessible
+            Restaurants
+          </h2>
+          <Search
+            restData={restaurantData}
+            filteredData={filteredDataHandler}
+          />
+          <RateFilter
+            restData={restaurantData}
+            filteredData={filteredDataHandler}
+          />
         </div>
-    )
+        {filterData === "No" ? (
+          <div>Sorry!! Restaurants closed</div>
+        ) : (
+          <div className="allCards">
+            {filterData.map((item) => (
+              <Link
+                className="cardLink"
+                key={item.info.id}
+                to={"/restaurant/" + item.info.id}
+              >
+                {item?.info?.aggregatedDiscountInfoV3?.header ? <PromotedRestaurantCard filterData={item} /> : <RestaurantCard filterData={item} />}
+                
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    );
 }
 export default Body;
