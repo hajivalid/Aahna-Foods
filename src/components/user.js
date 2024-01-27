@@ -1,4 +1,5 @@
 import { Component } from "react";
+import AddressContext from "../utils/AddressContext";
 
 
 class User extends Component {
@@ -29,6 +30,9 @@ class User extends Component {
         return (
             <div className="aboutCard">
                 <h3>Name: {name}</h3>
+                <AddressContext.Consumer>
+                    {({currentLocation})=> <div>Current Location: {currentLocation}</div>}
+                </AddressContext.Consumer>
                 <div>Location: {location}</div>
                 <div>Contact: {login}@gmail.com</div>
             </div>

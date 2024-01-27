@@ -4,11 +4,13 @@ import { getGeoLocation } from "../utils/helper";
 export const getUrlsBasedOnGeoLocation = async () => {
   try {
     const { latitude, longitude } = await getGeoLocation();
+    console.log(latitude, longitude);
 
     const CARD_INFO = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
     const REST_INFO = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${latitude}&lng=${longitude}&restaurantId=`;
+    const CURRENT_LOCATION = `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`;
 
-    return {CARD_INFO, REST_INFO};
+    return {CARD_INFO, REST_INFO, CURRENT_LOCATION};
   } catch (error) {
     console.error("Error:", error.message);
     return null;
