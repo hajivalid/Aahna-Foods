@@ -4,7 +4,6 @@ import { Itemcard } from "./MenuItem.styled";
 import {MENU_IMG} from "../../utils/constants"
 
 const MenuItem = (props) => {
-    console.log('______', props.menuList);
     let itemInfo = props.menuList?.card?.info;
     let price = (itemInfo.price)?itemInfo.price : itemInfo.defaultPrice;
   return (

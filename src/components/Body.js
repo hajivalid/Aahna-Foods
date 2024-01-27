@@ -12,7 +12,6 @@ const Body = () => {
     const [filterData, setFilterData] = useState([]);
 
     const filteredDataHandler = (data) =>{
-        console.log('------',data);
         setFilterData(data);
     }
 

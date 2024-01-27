@@ -27,9 +27,6 @@ const AppLayout = () => {
 
   const fetchCurrentLocation = async () => {
     const { latitude, longitude } = await getGeoLocation();
-    console.log(
-      `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
-    );
     let data = await fetch(
       `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
     );

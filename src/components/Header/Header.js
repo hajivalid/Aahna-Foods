@@ -1,7 +1,7 @@
 import logo from "../../utils/images/Aahna_white.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart, faGlobe, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
 import { useContext } from "react";
 import AddressContext from "../../utils/AddressContext";
@@ -17,42 +17,42 @@ const Header = () => {
       </div>
       <div className="nav-list">
         <ul className="flex items-center mx-[10px] my-auto">
-          <li className={`list-none onlineStatus text-[22px] ${signalIcon}`}>
+          <li className={`list-none onlineStatus text-[18px] ${signalIcon}`}>
             <FontAwesomeIcon icon={faLocationDot} />
             <span className={`text-[14px] ${signalIcon} font-medium mr-4 ml-1`}>{currentLocation}</span>
           </li>
           <li className="list-none text-[#233142] cursor-pointer ">
-            <Link
+            <NavLink
               className="decoration-inherit text-[18px] p-5 hover:text-[#FA0112]"
               to="/"
             >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li className="list-none text-[#233142] cursor-pointer">
-            <Link
+            <NavLink
               className="decoration-inherit text-[18px] p-5 hover:text-[#FA0112]"
               to="/grocery"
             >
               Grocery
-            </Link>
+            </NavLink>
           </li>
           <li className="list-none text-[#233142] cursor-pointer ">
-            <Link
+            <NavLink
               className="decoration-inherit text-[18px] p-5 hover:text-[#FA0112]"
               to="/about"
             >
               About US
-            </Link>
+            </NavLink>
           </li>
           <li className="list-none text-[#233142] cursor-pointer">
             {" "}
-            <Link
+            <NavLink
               className="decoration-inherit text-[18px] p-5 hover:text-[#FA0112]"
               to="/contact"
             >
               Contact US
-            </Link>
+            </NavLink>
           </li>
           <li className="list-none text-[#233142] cursor-pointer">
             <FontAwesomeIcon

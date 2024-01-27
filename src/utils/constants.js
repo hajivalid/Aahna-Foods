@@ -4,7 +4,7 @@ import { getGeoLocation } from "../utils/helper";
 export const getUrlsBasedOnGeoLocation = async () => {
   try {
     const { latitude, longitude } = await getGeoLocation();
-    console.log(latitude, longitude);
+    //console.log(latitude, longitude);
 
     const CARD_INFO = `https://www.swiggy.com/dapi/restaurants/list/v5?lat=${latitude}&lng=${longitude}&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING`;
     const REST_INFO = `https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=${latitude}&lng=${longitude}&restaurantId=`;

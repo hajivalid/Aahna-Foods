@@ -4,7 +4,6 @@ import AddressContext from "../utils/AddressContext";
 
 class User extends Component {
     constructor(props){
-        console.log('constructor');
         super(props);
         this.state = {
             name: this.props.name,
@@ -13,7 +12,6 @@ class User extends Component {
         }
     }
     componentDidMount(){
-        console.log('componentDidMount');
         fetch("https://api.github.com/users/hajivalid")
           .then((response) => response.json())
           .then((data) => {
@@ -21,11 +19,11 @@ class User extends Component {
         });
     }
     componentDidUpdate(){
-        console.log('componentDidUpdate');
+        //console.log('componentDidUpdate');
     }
 
     render(){
-        console.log('render');
+        //console.log('render');
         const {name, location, login} = this.state;
         return (
             <div className="aboutCard">
