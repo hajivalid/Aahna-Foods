@@ -12,11 +12,6 @@ export const RestInfoStyle = styled.div`
       justify-content: space-between;
       margin-bottom: 20px;
     }
-    h2 {
-      margin: 10px 0px;
-      font-weight: 600;
-      font-size: 18px;
-    }
     p {
       margin: 5px 0px;
     }

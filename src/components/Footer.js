@@ -4,7 +4,7 @@ import { faYoutube, faInstagram, faFacebook, faTwitter } from '@fortawesome/free
 
 const Footer = () =>{
     return(
-        <div className="footerSection">
+        <div className="footerSection mt-auto">
             <img alt="logo" src={logo}/>
             <div className="copyRight">© 0000 Aahna Pvt. Ltd</div>
             <div className="socialLinks">

@@ -36,7 +36,7 @@ const RestaurantMenu = () => {
       <div className="restDetails">
         <div className="restInfo">
           <div className="restAdd">
-            <h2>{name}</h2>
+            <h2 className="font-extrabold text-[20px] my-[10px]">{name}</h2>
             <p>{cuisines.join(", ")}</p>
             <p>
               {locality}, {city}

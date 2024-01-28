@@ -10,6 +10,9 @@ import ContactUs from "./components/ContactUs";
 import RestaurantMenu from "./components/RestaurantMenu/RestaurantMenu";
 import AddressContext from "./utils/AddressContext";
 import { getGeoLocation } from "./utils/helper";
+import { Provider } from "react-redux";
+import appStore from "./utils/redux/appStore";
+import CartItems from "./components/CartItems";
 //import Grocery from './components/Grocery';
 
 const Grocery = lazy(() => import("./components/Grocery"));
@@ -20,7 +23,7 @@ const AppLayout = () => {
 
   useEffect(() => {
     fetchCurrentLocation().then((data) => {
-      const {neighbourhood, county, city, postcode} = data?.address;
+      const { neighbourhood, county, city, postcode } = data?.address;
       setCurrentAdd(`${neighbourhood}, ${county}, ${city}, ${postcode}`);
     });
   }, []);
@@ -35,13 +38,15 @@ const AppLayout = () => {
   };
 
   return (
-    <div className="m-0 relative font-['Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif]">
-      <AddressContext.Provider value={{ currentLocation: currentAdd }}>
-        <Header />
-        <Outlet />
-        <Footer />
-      </AddressContext.Provider>
-    </div>
+    <Provider store={appStore}>
+      <div className="m-0 relative font-['Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif] flex flex-col min-h-[100vh]">
+        <AddressContext.Provider value={{ currentLocation: currentAdd }}>
+          <Header />
+          <Outlet />
+          <Footer />
+        </AddressContext.Provider>
+      </div>
+    </Provider>
   );
 };
 const appRouter = createBrowserRouter([
@@ -59,6 +64,7 @@ const appRouter = createBrowserRouter([
         ),
       },
       { path: "/contact", element: <ContactUs /> },
+      { path: "/cart", element: <CartItems /> },
       {
         path: "/grocery",
         element: (

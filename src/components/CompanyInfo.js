@@ -13,7 +13,7 @@ export const HigherOrderContactDetails = (CompanyInfo) => {
     return (
       <div className="mx-auto my-6 text-center text-[25px] font-bold text-[#FA0112]">
         <CompanyInfo />
-        <div>930 9090 930</div>
+        <div>930 **** 930</div>
         <div>hajivalid@gmail.com </div>
       </div>
     );

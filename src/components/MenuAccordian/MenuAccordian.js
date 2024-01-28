@@ -29,7 +29,7 @@ const MenuAccordian = (props) => {
           </div>
           {showContentIndex === index &&
             item?.card?.card?.itemCards.map((item) => (
-              <MenuItem key={item.card.info.id} menuList={item} />
+              <MenuItem key={item.card.info.id} menuList={item} navFrom={'accordian'}/>
             ))}
         </div>
       ))}
