@@ -9,7 +9,6 @@ const Search = (props) => {
     setSearchValue(event.target.value);
   };
   const onClickHandler = () => {
-    alert(searchValue);
     let data = "";
     if (searchValue != "") {
       data = props?.restData?.filter((item) =>

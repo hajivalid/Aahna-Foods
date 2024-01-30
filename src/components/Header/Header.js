@@ -8,7 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { NavLink } from "react-router-dom";
 import useOnlineStatus from "../../utils/useOnlineStatus";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import AddressContext from "../../utils/AddressContext";
 
 const Header = () => {
@@ -16,6 +16,11 @@ const Header = () => {
   const signalIcon = onlineStatus ? "online" : "offline";
   const { currentLocation } = useContext(AddressContext);
   const cartItems = useSelector((store) => store.cart.items);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const loginHandler = () => {
+    setIsLoggedIn(!isLoggedIn);
+  }
 
   console.log(cartItems);
   return (
@@ -76,10 +81,11 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="list-none text-[#233142] cursor-pointer relative">
-              <FontAwesomeIcon
+              {/* <FontAwesomeIcon
                 className="decoration-inherit text-[20px] p-5 hover:text-[#FA0112]"
                 icon={faUserCircle}
-              />
+              /> */}
+              <button className="text-[18px] p-5 hover:text-[#FA0112]" onClick={loginHandler}>{(isLoggedIn)? 'Logout':'Login'}</button>
           </li>
         </ul>
       </div>
