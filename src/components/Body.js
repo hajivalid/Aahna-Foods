@@ -30,13 +30,13 @@ const Body = () => {
         setFilterData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
 
-    return restaurantData.length === 0 ? (
+    return restaurantData?.length === 0 ? (
       <CardShimmerUI />
     ) : (
       <div className="bodyLayout">
         <div className="mt-5 mb-[10px] mx-5 flex justify-between items-center">
           <h2 className="text-[17px] text-gray-400 text-bold">
-            {filterData === "No" ? filterData : filterData.length} Accessible
+            {!filterData || filterData === "No" ? '0' : filterData?.length} Accessible
             Restaurants
           </h2>
           <Search
@@ -48,11 +48,11 @@ const Body = () => {
             filteredData={filteredDataHandler}
           />
         </div>
-        {filterData === "No" ? (
-          <div>Sorry!! Restaurants closed</div>
+        {!restaurantData || filterData === "No" ? (
+          <div className="text-[22px] font-extrabold text-gray-400 absolute top-[45%] left-[50%] translate-x-[-50%] translate-y-[-50%]">Sorry!! Restaurants closed.</div>
         ) : (
           <div className="allCards">
-            {filterData.map((item) => (
+            {filterData?.map((item) => (
               <Link
                 className="cardLink"
                 key={item.info.id}

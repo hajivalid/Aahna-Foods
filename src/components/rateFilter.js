@@ -6,7 +6,7 @@ const RateFilter = (props) => {
     let data = props?.restData?.filter(
       (item) => item?.info?.avgRating >= rating
     );
-    data = data.length === 0 ? "No" : data;
+    data = data?.length === 0 ? "No" : data;
     props.filteredData(data);
   };
 

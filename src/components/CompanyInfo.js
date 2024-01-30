@@ -1,9 +1,25 @@
 const CompanyInfo = () => {
   return (
-    <div className="contactInfo">
-      <h1>Contact Us:</h1>
-      <h3>Aahna Foods pvt ltd.</h3>
-      <div>Hyderabad 500085</div>
+    <div className="w-[25%] bg-slate-100 p-8 my-8 mx-auto">
+      <h1 className="font-extrabold text-[25px] text-[#233142]">
+        Get in Touch
+      </h1>
+      <h3 className="">contact our team.</h3>
+      <input
+        className="border border-[#233142] rounded-md p-2 mt-5 w-full"
+        placeholder="Name"
+      />
+      <input
+        className="border border-[#233142] rounded-md p-2 mt-5 w-full"
+        placeholder="Email address"
+      />
+      <textarea
+        className="border border-[#233142] rounded-md p-2 mt-5 w-full"
+        placeholder="What can we help with?"
+      />
+      <button className="bg-[#233142] text-white font-bold text-[16px] p-2 mt-5 w-full hover:bg-[#fa0112]">
+        Submit
+      </button>
     </div>
   );
 };
@@ -11,10 +27,12 @@ const CompanyInfo = () => {
 export const HigherOrderContactDetails = (CompanyInfo) => {
   return () => {
     return (
-      <div className="mx-auto my-6 text-center text-[25px] font-bold text-[#FA0112]">
+      <div className="">
         <CompanyInfo />
-        <div>930 **** 930</div>
-        <div>hajivalid@gmail.com </div>
+        <div className="text-center text-[14px] text-gray-400">
+          Aahna pvt ltd. Hyderabad-500085 <b>Email:</b> hajivalid@gmail.com{" "}
+          <b>Mobile:</b> 930 **** 930
+        </div>
       </div>
     );
   };
