@@ -9,8 +9,10 @@ const useRestaurantInfo  = (restId) =>{
       }, []);
     
       const fetchRestInfo = async () => {
-        const urls = await getUrlsBasedOnGeoLocation();
-        let data = await fetch(urls?.REST_INFO + restId.resid);
+        // if we are testing this component we need to uncomment the below line
+        //let data = await fetch('https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.4917748&lng=78.3857469&restaurantId=' + restId.resid);
+        const urls = await getUrlsBasedOnGeoLocation(); //comment this line for testing
+        let data = await fetch(urls?.REST_INFO + restId.resid); //comment this line for testing
         const json = await data.json();
         setRestInfo(json?.data);
         //   setCardGroupItems(json?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards);

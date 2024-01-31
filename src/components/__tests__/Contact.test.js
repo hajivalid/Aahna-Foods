@@ -9,6 +9,12 @@ test("Should load Contact us component", ()=>{
     expect(heading.length).toBeGreaterThan(0);
 });
 describe('contact components', () => {
+
+    //Helper functions
+    beforeAll(() => {console.log('Before All test cases')})
+    beforeEach(() => {console.log('Before Each test cases')})
+    afterAll(() => {console.log('After All test cases')})
+    afterEach(() => {console.log('After Each test cases')})
     
     test("Should load button inside Contact us component", ()=>{
         render(<CompanyInfo/>);

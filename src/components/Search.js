@@ -26,14 +26,14 @@ const Search = (props) => {
   return (
     <div className="text-center">
       <div className="relative mx-auto my-0">
-        <input
+        <input data-testid="searchInput"
           className=" text-[#233142] w-[450px] text-[16px] p-[10px] border border-gray-600 rounded-md shadow-md focus-visible:outline-[#333] "
           type="text"
           onChange={searchOnChangeHandler}
           value={searchValue}
           placeholder="Search for restaurant, cuisine or a dish"
         />
-        <button
+        <button data-testid='searchBth'
           className="text-center cursor-pointer bg-none p-3 text-[16px] text-[#233142] border-none absolute right-[1px] top-[1px] hover:text-[#FA0112]"
           onClick={onClickHandler}
         >

@@ -5,7 +5,7 @@ const MenuShimmerUI = () => {
   return (
     <RestInfoStyle>
       {[...Array(cardCount)].map((_, index) => (
-        <div className="shimmerMenu">
+        <div key={index} className="shimmerMenu">
           <div className="leftInfo">
             <div></div>
             <div></div>

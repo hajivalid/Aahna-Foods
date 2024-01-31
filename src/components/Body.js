@@ -22,8 +22,11 @@ const Body = () => {
     }, []);
 
     const fetchCardInfo = async() =>{
-        const urls = await getUrlsBasedOnGeoLocation();
-        let data = await fetch(urls.CARD_INFO);
+        
+        // if we are testing this component we need to uncomment the below line
+        //let data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4917748&lng=78.3857469&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        const urls = await getUrlsBasedOnGeoLocation(); //comment this line for testing
+        let data = await fetch(urls.CARD_INFO); //comment this line for testing
         const json = await data.json();
 
         setRestaurantData(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -53,7 +56,7 @@ const Body = () => {
         ) : (
           <div className="allCards">
             {filterData?.map((item) => (
-              <Link
+              <Link 
                 className="cardLink"
                 key={item.info.id}
                 to={"/restaurant/" + item.info.id}

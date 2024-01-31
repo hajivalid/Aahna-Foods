@@ -22,7 +22,6 @@ const Header = () => {
     setIsLoggedIn(!isLoggedIn);
   }
 
-  console.log(cartItems);
   return (
     <div className="flex justify-between items-center shadow-lg">
       <div className="flex items-center">

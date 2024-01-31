@@ -6,7 +6,7 @@ export const getGeoLocation = () => {
         resolve({ latitude, longitude });
       },
       (error) => {
-        reject(error);
+                reject(error);
       }
     );
   });

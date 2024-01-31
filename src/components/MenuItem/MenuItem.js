@@ -18,7 +18,7 @@ const MenuItem = (props) => {
     }
   return (
     <Itemcard>
-      <div className={`itemCard ${borderLine} border-[#233142]`}>
+      <div data-testid='foodItems' className={`itemCard ${borderLine} border-[#233142]`}>
         <div className="itemInfo">
           <h3><FontAwesomeIcon className={(itemInfo.itemAttribute.vegClassifier === "VEG")? 'veg':'nonVeg'} icon={faCertificate} />{itemInfo.name}</h3>
           <p>&#8377; {price/100}</p>
